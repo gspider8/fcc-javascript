@@ -1,0 +1,62 @@
+{
+  "githubRepo": "https://github.com/gspider8/fcc-javascript",
+  "portfolio": [
+    {   
+      "name": "Dragon Fighting RPG",
+      "id": "dragon-rpg",
+      "type": "front-end",
+      "description": "FreeCodeCamp JavaScript Course",
+      "languages": "HTML, CSS, JavaScript",
+      "number": 3,
+      "frameworks": []
+    },
+    {
+      "name": "Random Background Color",
+      "id": "random-background-color",
+      "type": "front-end",
+      "description": "FreeCodeCamp JavaScript Course",
+      "languages": "HTML, CSS, JavaScript",
+      "number": 4
+    },
+    {
+      "name": "Calorie Counter",
+      "id": "calorie-counter",
+      "type": "front-end",
+      "description": "FreeCodeCamp JavaScript Course",
+      "languages": "HTML, CSS, JavaScript",
+      "number": 5
+    },
+    {
+      "name": "Rock Paper Scissors",
+      "id": "rock-paper-scissors",
+      "type": "front-end",
+      "description": "FreeCodeCamp JavaScript Course",
+      "languages": "HTML, CSS, JavaScript",
+      "number": 6
+    },
+    {
+      "name": "Music Player",
+      "id": "music-player",
+      "type": "front-end",
+      "description": "FreeCodeCamp JavaScript Course",
+      "languages": "HTML, CSS, JavaScript",
+      "number": 7
+    },
+    {
+      "name": "Football Cards",
+      "id": "football-cards",
+      "type": "front-end",
+      "description": "FreeCodeCamp JavaScript Course",
+      "languages": "HTML, CSS, JavaScript",
+      "number": 10
+    },
+    {
+      "name": "Statistics Calculator",
+      "id": "statistics-calculator",
+      "type": "front-end",
+      "description": "FreeCodeCamp JavaScript Course",
+      "languages": "HTML, CSS, JavaScript",
+      "number": 16
+    }
+  ] 
+}
