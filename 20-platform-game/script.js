@@ -167,7 +167,7 @@ const animate = () => {
   }
 
   platforms.forEach((platform) => {
-    const collisionDetectionRules = [
+    const platformTopDetectionRules = [
       player.position.y + player.height <= platform.position.y,
       player.position.y + player.height + player.velocity.y >= platform.position.y,
       player.position.x >= platform.position.x - player.width / 2,
@@ -175,12 +175,12 @@ const animate = () => {
         platform.position.x + platform.width - player.width / 3,
     ];
 
-    if (collisionDetectionRules.every((rule) => rule)) {
+    if (platformTopDetectionRules.every((rule) => rule)) {
       player.velocity.y = 0;
       return;
     }
 
-    const platformDetectionRules = [
+    const platformBottomDetectionRules = [
       player.position.x >= platform.position.x - player.width / 2,
       player.position.x <=
         platform.position.x + platform.width - player.width / 3,
@@ -188,9 +188,26 @@ const animate = () => {
       player.position.y <= platform.position.y + platform.height,
     ];
 
-    if (platformDetectionRules.every(rule => rule)) {
+    if (platformBottomDetectionRules.every(rule => rule)) {
       player.position.y = platform.position.y + player.height;
       player.velocity.y = gravity;
+    };
+
+    const platformLeftDetectionRules = [
+        player.position.x + player.width <= platform.position.x,
+        player.position.x + player.width + player.velocity.x >= platform.position.x,
+        player.position.y <= platform.position.y + platform.height,
+        player.position.y + player.height >= platform.position.y,
+    ];
+
+    if (platformLeftDetectionRules.every(rule => rule)) {
+      console.log("left collision")
+      player.velocity.x = 0;
+      player.position.x = platform.position.x - player.width;
+      // player.position.y = platform.position.y - player.height;
+      // player.position.x = platform.position.x + player.width / 2;
+      // player.position.y = platform.position.y + player.height;
+      // player.velocity.y = gravity;
     };
   });
 
@@ -209,7 +226,6 @@ const animate = () => {
     if (checkpointDetectionRules.every((rule) => rule)) {
       checkpoint.claim();
 
-
       if (index === checkpoints.length - 1) {
         isCheckpointCollisionDetectionActive = false;
         showCheckpointScreen("You reached the final checkpoint!");
@@ -222,7 +238,6 @@ const animate = () => {
     };
   });
 }
-
 
 const keys = {
   rightKey: {
