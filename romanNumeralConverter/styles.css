@@ -35,8 +35,8 @@
   
   .title {
     text-align: center;
-    margin: 0px auto;
-    font-size: 36;
+    margin: 0 auto;
+    font-size: 36px;
   }
   
   .container {
@@ -46,7 +46,7 @@
     background-color: var(--foreground-color);
     border: solid var(--primary-color) 4px;
     width: 453px;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 18px;
     
   }
@@ -56,7 +56,7 @@
   }
   #prompt {
     text-align: center;
-    margin: 0px;
+    margin: 0;
   }
   
   input {
@@ -71,7 +71,7 @@
     font-size: 20px;
     outline-color: var(--highlight-color);
     text-align: center;
-    padding: 8;
+    padding: 8px;
   }
   
   #output {

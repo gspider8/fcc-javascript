@@ -72,7 +72,7 @@ class Platform {
 }
 
 class CheckPoint {
-  constructor(x, y, z) {
+  constructor(x, y) {
     this.position = {
       x,
       y,
@@ -92,8 +92,7 @@ class CheckPoint {
     this.position.y = Infinity;
     this.claimed = true;
   }
-};
-
+}
 const player = new Player();
 
 const platformPositions = [
@@ -116,13 +115,13 @@ const platforms = platformPositions.map(
 );
 
 const checkpointPositions = [
-  { x: 1170, y: proportionalSize(80), z: 1 },
-  { x: 2900, y: proportionalSize(330), z: 2 },
-  { x: 4800, y: proportionalSize(80), z: 3 },
+  { x: 1170, y: proportionalSize(80) },
+  { x: 2900, y: proportionalSize(330) },
+  { x: 4800, y: proportionalSize(80) },
 ];
 
 const checkpoints = checkpointPositions.map(
-  (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z)
+  (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y)
 );
 
 const animate = () => {
@@ -191,24 +190,20 @@ const animate = () => {
     if (platformBottomDetectionRules.every(rule => rule)) {
       player.position.y = platform.position.y + player.height;
       player.velocity.y = gravity;
-    };
+    }
 
     const platformLeftDetectionRules = [
-        player.position.x + player.width <= platform.position.x,
-        player.position.x + player.width + player.velocity.x >= platform.position.x,
-        player.position.y <= platform.position.y + platform.height,
-        player.position.y + player.height >= platform.position.y,
+      player.position.x + player.width <= platform.position.x,
+      player.position.x + player.width + player.velocity.x >= platform.position.x,
+      player.position.y <= platform.position.y + platform.height,
+      player.position.y + player.height >= platform.position.y,
     ];
 
     if (platformLeftDetectionRules.every(rule => rule)) {
       console.log("left collision")
       player.velocity.x = 0;
       player.position.x = platform.position.x - player.width;
-      // player.position.y = platform.position.y - player.height;
-      // player.position.x = platform.position.x + player.width / 2;
-      // player.position.y = platform.position.y + player.height;
-      // player.velocity.y = gravity;
-    };
+    }
   });
 
   checkpoints.forEach((checkpoint, index, checkpoints) => {
@@ -233,9 +228,7 @@ const animate = () => {
       } else if (player.position.x >= checkpoint.position.x && player.position.x <= checkpoint.position.x + 40) {
         showCheckpointScreen("You reached a checkpoint!")
       }
-
-
-    };
+    }
   });
 }
 
