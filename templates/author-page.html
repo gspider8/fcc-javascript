@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>freeCodeCamp News Author Page</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link type ="text/css" rel="stylesheet" href="{% static 'portfolio/fcc-javascript/author-page.css' %}" />
   </head>
   <body>
     <h1 class="title">freeCodeCamp News Author Page</h1>
@@ -15,6 +16,6 @@
       <button class="btn" id="load-more-btn">Load More Authors</button>
     </main>
 
-    <script src="./script.js"></script>
+    <script src="{% static 'portfolio/fcc-javascript/author-page.js' %}"></script>
   </body>
 </html>

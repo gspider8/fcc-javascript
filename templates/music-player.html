@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link type ="text/css" rel="stylesheet" href="{% static 'portfolio/fcc-javascript/music-player.css' %}" />
     <title>
       Learn Basic String and Array Methods by Building a Music Player App
     </title>
@@ -115,6 +116,6 @@
         <ul id="playlist-songs"></ul>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="{% static 'portfolio/fcc-javascript/music-player.js' %}"></script>
   </body>
 </html>

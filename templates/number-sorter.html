@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link type ="text/css" rel="stylesheet" href="{% static 'portfolio/fcc-javascript/number-sorter.css' %}" />
     <title>Number Sorter</title>
   </head>
   <body>
@@ -138,6 +139,6 @@
         </div>
       </div>
     </main>
-    <script src="./script.js"></script>
+    <script src="{% static 'portfolio/fcc-javascript/number-sorter.js' %}"></script>
   </body>
 </html>

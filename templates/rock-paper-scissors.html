@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors game</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link type ="text/css" rel="stylesheet" href="{% static 'portfolio/fcc-javascript/rock-paper-scissors.css' %}" />
   </head>
   <body>
     <h1>Let's play Rock, Paper, Scissors!</h1>
@@ -53,6 +54,6 @@
         <button class="btn" id="reset-game-btn">Play again?</button>
       </div>
     </main>
-    <script src="./script.js"></script>
+    <script src="{% static 'portfolio/fcc-javascript/rock-paper-scissors.js' %}"></script>
   </body>
 </html>

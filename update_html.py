@@ -27,7 +27,7 @@ for file_obj in Path("templates").iterdir():
 
     # Limiter
     counter += 1
-    if counter > 1:
+    if counter > 1000:
         break
 
     # Read file to memory
@@ -63,6 +63,7 @@ for file_obj in Path("templates").iterdir():
 
     # rewrite file with new js and css references
     with open(str(file_obj.__fspath__()), "w") as w_file:
+        w_file.write("{% load static %}\n")
         for index in range(len(lines)):
             if index == css["line_in_html"]:
                 w_file.write("".join(css_replacement))

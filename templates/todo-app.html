@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learn localStorage by Building a Todo App</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link type ="text/css" rel="stylesheet" href="{% static 'portfolio/fcc-javascript/todo-app.css' %}" />
 </head>
 
 <body>
@@ -52,7 +53,7 @@
       <div id="tasks-container"></div>
     </div>
   </main>
-  <script src="script.js"></script>
+  <script src="{% static 'portfolio/fcc-javascript/todo-app.js' %}"></script>
 </body>
 
 </html>

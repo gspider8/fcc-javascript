@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cash Register Project</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link type ="text/css" rel="stylesheet" href="{% static 'portfolio/fcc-javascript/cash-register.css' %}" />
 </head>
 
 <body>
@@ -17,7 +18,7 @@
   <input id="cash" /><br>
   <button id="purchase-btn">Purchase</button>
 
-  <script src="./script.js"></script>
+  <script src="{% static 'portfolio/fcc-javascript/cash-register.js' %}"></script>
 </body>
 
 </html>

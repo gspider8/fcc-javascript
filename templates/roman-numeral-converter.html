@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link type ="text/css" rel="stylesheet" href="{% static 'portfolio/fcc-javascript/roman-numeral-converter.css' %}" />
   </head>
   <body>
     <div>
@@ -17,6 +18,6 @@
       <button id="convert-btn">Generate</button>
     </div>
     <div id="output" class="container hidden"></div>
-    <script src="script.js"></script>
+    <script src="{% static 'portfolio/fcc-javascript/roman-numeral-converter.js' %}"></script>
   </body>
 </html>
